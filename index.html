@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#f8eee9" />
+<title>For My Favorite Person ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbf5ef;--pink:#e9b9bd;--rose:#b65c69;--ink:#49373a;--muted:#887477;--line:#eadbd5;--white:#fffaf7}
+*{box-sizing:border-box}html{scroll-behavior:auto}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
+a{color:inherit}button{font:inherit;cursor:pointer}.music{position:fixed;z-index:10;top:16px;right:16px;border:1px solid var(--line);background:#fffaf7e8;backdrop-filter:blur(10px);border-radius:99px;padding:11px 15px;color:var(--ink);box-shadow:0 5px 20px #77555a12}.music span{margin-right:5px}.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:85px 22px 60px;position:relative;overflow:hidden}.hero-inner{max-width:800px;position:relative;z-index:1}.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--rose)}h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500}h1{font-size:clamp(48px,10vw,100px);line-height:1.05;margin:22px 0 18px}h1 em{color:var(--rose);font-weight:500}.hero p{font-size:16px;color:var(--muted);max-width:480px;margin:0 auto;line-height:1.8}.hero-photo{width:min(270px,65vw);aspect-ratio:4/5;object-fit:cover;display:block;margin:34px auto 28px;transform:rotate(-3deg);border:10px solid white;box-shadow:0 16px 50px #593c3c1b}.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--rose);color:var(--rose);background:transparent;padding:13px 20px;border-radius:100px;text-decoration:none;font-size:13px;transition:.25s}.pill:hover{background:var(--rose);color:white;transform:translateY(-2px)}.floating-heart{position:absolute;color:#d99ba3;opacity:.5;animation:float 6s ease-in-out infinite;font-size:24px}.floating-heart:nth-child(1){top:18%;left:13%}.floating-heart:nth-child(2){right:13%;top:28%;animation-delay:1s}.floating-heart:nth-child(3){left:20%;bottom:18%;animation-delay:2s}@keyframes float{50%{transform:translateY(-17px) rotate(8deg)}}section{padding:100px 22px}.wrap{max-width:1000px;margin:auto}.section-head{text-align:center;margin-bottom:44px}.section-head h2{font-size:clamp(34px,6vw,54px);margin:12px 0}.section-head p{color:var(--muted);line-height:1.8}.memories{background:#f5e9e4}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.polaroid{background:#fff;padding:12px 12px 20px;box-shadow:0 10px 30px #60444a10;transform:rotate(var(--tilt));transition:transform .3s}.polaroid:hover{transform:rotate(0) translateY(-7px)}.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#eadbd5}.polaroid p{font-family:'Parisienne',cursive;font-size:24px;text-align:center;margin:14px 5px 0;color:#70595c}.placeholder{color:#9e8888;background:linear-gradient(135deg,#f4e3df,#e9d6d1);display:grid;place-items:center;text-align:center;padding:15px;font-size:12px;line-height:1.6}.love-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.love-card{border:1px solid var(--line);background:var(--white);padding:25px 18px;border-radius:4px;text-align:center;min-height:145px;transition:.25s}.love-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #6a42420c}.love-card .icon{font-size:25px}.love-card h3{font-size:20px;margin:12px 0 8px}.love-card p{font-size:13px;line-height:1.7;color:var(--muted);margin:0}.letters{background:#fffaf7}.letter-list{max-width:700px;margin:auto;display:grid;gap:13px}.letter-toggle{width:100%;border:1px solid var(--line);background:white;text-align:left;padding:18px 20px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;border-radius:5px}.letter-toggle b{font-family:'Playfair Display',serif;font-size:18px;font-weight:500}.letter-content{display:none;padding:18px 22px 24px;background:#f9f0ec;border:1px solid var(--line);border-top:0;line-height:1.9;color:#6f5a5d;font-size:14px}.letter-content.open{display:block;animation:reveal .35s ease}@keyframes reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}.birthday-letter{max-width:760px;margin:auto;background:#fff;border:1px solid #efe0d9;padding:clamp(25px,6vw,55px);box-shadow:0 15px 40px #6145480c;position:relative}.birthday-letter:before{content:'♡';position:absolute;right:25px;top:15px;color:#dca9ad;font-size:28px}.birthday-letter h2{font-size:clamp(32px,6vw,48px);text-align:center;margin:0 0 26px}.birthday-letter p{font-family:'Playfair Display',serif;font-size:17px;line-height:2;color:#6e5659}.signoff{font-family:'Parisienne',cursive!important;font-size:34px!important;color:var(--rose)!important}.secret-section{background:#f3e5e0;text-align:center}.secret-box{max-width:650px;margin:auto}.secret-box h2{font-size:clamp(36px,6vw,56px)}.secret-box p{color:var(--muted);line-height:1.8}.secret-button{border:0;background:var(--rose);color:white;border-radius:100px;padding:15px 24px;box-shadow:0 7px 18px #b65c6925;transition:.2s}.secret-button:hover{transform:translateY(-2px)}.secret-message{display:none;margin:30px auto 0;padding:30px;background:#fffaf7;border:1px solid var(--line);max-width:550px;line-height:1.9;font-family:'Playfair Display',serif;font-size:19px}.secret-message.show{display:block;animation:reveal .7s}.footer{text-align:center;padding:48px 20px;color:var(--muted);font-size:12px}.footer .heart{font-size:22px;color:var(--rose);display:block;margin-bottom:8px}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:700px){section{padding:75px 18px}.gallery{grid-template-columns:repeat(2,1fr);gap:15px}.gallery .polaroid:last-child{grid-column:1/-1;width:min(75%,340px);margin:auto}.love-grid{grid-template-columns:repeat(2,1fr);gap:10px}.love-card{padding:20px 12px}.hero p{font-size:14px}.birthday-letter p{font-size:16px}.floating-heart:nth-child(1){left:6%}.floating-heart:nth-child(2){right:6%}}
+@media(max-width:390px){.gallery{grid-template-columns:1fr}.gallery .polaroid:last-child{grid-column:auto;width:auto}.love-grid{grid-template-columns:1fr 1fr}}
+
+/* Button-driven chapters: no page scrolling */
+body{overflow:hidden}
+.chapter{display:none!important;height:100svh;min-height:100svh;overflow:hidden;position:relative;padding-bottom:92px}
+.chapter.active{display:block!important;animation:chapterIn .45s ease both}
+.hero.chapter.active{display:grid!important}
+@keyframes chapterIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.chapter .wrap,.chapter .secret-box,.hero-inner{max-height:calc(100svh - 115px);overflow:hidden}
+.chapter-nav{position:fixed;z-index:20;bottom:14px;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px 14px}
+.chapter-nav button{border:1px solid var(--rose);background:#fffaf7ed;color:var(--rose);border-radius:999px;padding:11px 17px;box-shadow:0 5px 18px #77555a12}
+.chapter-nav button.next{background:var(--rose);color:#fff}
+.chapter-nav button:disabled{opacity:.35;cursor:default}
+.chapter-progress{font-size:11px;color:var(--muted);letter-spacing:.08em;min-width:56px;text-align:center}
+.chapter .section-head{margin-bottom:20px}
+.chapter section,.chapter .wrap{padding-top:35px;padding-bottom:25px}
+#letter .birthday-letter{padding:clamp(18px,4vw,36px)}
+#letter .birthday-letter p{font-size:clamp(14px,2.3vh,17px);line-height:1.65;margin:10px 0}
+#letter .birthday-letter h2{margin-bottom:14px}
+#messages .letter-list{gap:8px}
+#messages .letter-toggle{padding:12px 15px}
+#messages .letter-content{padding:12px 15px;line-height:1.65;font-size:13px}
+#reasons .love-card{min-height:0;padding:14px 12px}
+@media(max-width:700px){.chapter{padding:70px 16px 85px}.hero.chapter{padding:70px 18px 90px}.chapter .wrap,.chapter .secret-box,.hero-inner{max-height:calc(100svh - 155px)}.chapter-nav{bottom:10px}.chapter-nav button{padding:10px 14px}#letter .birthday-letter p{font-size:14px;line-height:1.55;margin:8px 0}}
+
+.love-card {
+  cursor: pointer;
+}
+
+.reason-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(50, 30, 35, 0.65);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.reason-overlay.show {
+  display: flex;
+  animation: reasonFade .25s ease;
+}
+
+.reason-popup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: #fffaf7;
+  border: 1px solid #eadbd5;
+  padding: 38px 30px;
+  text-align: center;
+  box-shadow: 0 20px 60px #0003;
+  animation: reasonPop .3s ease;
+}
+
+.reason-close {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+  border: none;
+  background: none;
+  color: #887477;
+  font-size: 28px;
+}
+
+.reason-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.reason-popup h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #b65c69;
+  margin: 8px 0 18px;
+}
+
+.reason-popup p {
+  color: #70595c;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.reason-heart {
+  color: #b65c69;
+  font-size: 25px;
+  margin-top: 22px;
+}
+
+@keyframes reasonFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes reasonPop {
+  from { opacity: 0; transform: scale(.9) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media(max-width: 480px) {
+  .reason-popup {
+    padding: 32px 23px;
+  }
+
+  .reason-popup h2 {
+    font-size: 26px;
+  }
+
+  .reason-popup p {
+    font-size: 14px;
+  }
+}
+.secret-message {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  margin: 30px auto 0;
+  padding: 12px;
+  background: #fffaf7;
+  border: 1px solid var(--line);
+}
+
+.secret-message video {
+  display: block;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+/* Gift opening screen + mobile-first touch improvements */
+.gift-gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;text-align:center;padding:24px;background:var(--paper);transition:opacity .6s ease,visibility .6s ease;overflow:hidden}
+.gift-gate::before,.gift-gate::after{content:'♡';position:absolute;color:#d99ba3;opacity:.35;font-size:clamp(40px,12vw,90px);animation:float 6s ease-in-out infinite}
+.gift-gate::before{top:12%;left:8%}.gift-gate::after{right:8%;bottom:12%;animation-delay:1.5s}
+.gift-gate.closed{opacity:0;visibility:hidden;pointer-events:none}
+.gift-card{width:min(100%,520px);position:relative;z-index:1;padding:clamp(24px,6vw,44px);background:#fffaf7;border:1px solid var(--line);box-shadow:0 18px 55px #61454812}
+.gift-icon{font-size:42px;margin-bottom:14px}.gift-card h1{font-size:clamp(38px,10vw,66px);margin:14px 0}.gift-card h1 em{color:var(--rose)}.gift-card p{font-size:14px;line-height:1.8;color:var(--muted);margin:0 auto 24px;max-width:360px}
+button,.pill,.secret-button,.letter-toggle{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.chapter-nav{padding-bottom:max(10px,env(safe-area-inset-bottom))}
+.chapter.active{overscroll-behavior:none}
+@media(max-width:700px){
+  .music{top:max(10px,env(safe-area-inset-top));right:10px;padding:9px 12px;font-size:12px}
+  .chapter{padding:62px 14px calc(88px + env(safe-area-inset-bottom));height:100svh;min-height:100svh}
+  .chapter .wrap,.chapter .secret-box,.hero-inner{max-height:calc(100svh - 150px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+  .chapter-nav{bottom:0;padding:10px 10px calc(10px + env(safe-area-inset-bottom));gap:8px;background:linear-gradient(transparent,var(--paper) 35%)}
+  .chapter-nav button{min-height:44px;padding:11px 13px;font-size:13px}
+  .chapter-progress{min-width:48px;font-size:10px}
+  .gallery{gap:10px}.polaroid{padding:8px 8px 14px}.polaroid p{font-size:21px}
+  .love-card{min-height:0!important;padding:14px 10px!important}.love-card h3{font-size:18px}.love-card p{font-size:12px;line-height:1.55}
+  .section-head{margin-bottom:18px!important}.section-head h2{font-size:clamp(30px,9vw,40px);margin:8px 0}.section-head p{font-size:13px;line-height:1.6}
+  .birthday-letter{padding:18px!important}.birthday-letter p{font-size:14px!important;line-height:1.65!important}
+  .letter-toggle{min-height:48px;padding:12px!important}.letter-toggle b{font-size:15px!important}
+  .secret-message{padding:18px;font-size:16px;line-height:1.7}
+}
+@media(max-width:360px){.chapter-nav button{padding:10px;font-size:12px}.chapter-progress{min-width:42px}.hero h1{font-size:44px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+/* Make only the final chapter scrollable */
+#secret {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 110px;
+}
+
+#secret .secret-box {
+  max-height: none;
+  overflow: visible;
+}
+
+#secret .footer {
+  padding-bottom: 30px;
+}
+.secret-message iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+</style>
+</head>
+<body>
+<div class="reason-overlay" id="reasonOverlay" onclick="closeReason()">
+  <div class="reason-popup" onclick="event.stopPropagation()">
+    <button class="reason-close" onclick="closeReason()">×</button>
+    <div class="reason-icon" id="reasonIcon">🌷</div>
+    <h2 id="reasonTitle">Your heart</h2>
+    <p id="reasonText"></p>
+    <div class="reason-heart">♡</div>
+  </div>
+</div>
+<div class="gift-gate" id="giftGate" aria-modal="true" role="dialog">
+  <div class="gift-card">
+    <div class="gift-icon">🎁</div>
+    <div class="eyebrow">A gift made just for you</div>
+    <h1>Something <em>special</em><br>is waiting.</h1>
+    <p>Take your time. I made this little corner of the world just for you.</p>
+    <button class="pill" id="openGift" type="button">Tap to open your birthday gift ♡</button>
+  </div>
+</div>
+<button class="music" id="musicButton" aria-label="Toggle music"><span>♫</span><span id="musicLabel">Play our song</span></button>
+<audio id="song" src="assets/love_u_like_that.mp3" loop></audio>
+<header class="hero chapter active" id="top">
+  <span class="floating-heart">♡</span><span class="floating-heart">✧</span><span class="floating-heart">♡</span>
+  <div class="hero-inner reveal visible">
+    <div class="eyebrow">A little birthday surprise</div>
+    <h1>For my <em>favorite</em><br>person.</h1>
+    <p>Made with love, filled with memories, and dedicated to the girl who makes my days brighter.</p>
+    <div class="hero-photo placeholder" id="heroPhoto">Add your favorite photo of you two here<br><small>assets/cover.mp4</small></div>
+    <button class="pill" type="button" data-go="memories">Come inside&nbsp; ↓</button>
+  </div>
+</header>
+<section class="memories chapter" id="memories">
+  <div class="wrap reveal">
+    <div class="section-head"><div class="eyebrow">Little pieces of us</div><h2>Our memories ♡</h2><p>Some moments I wish I could pause and keep forever.</p></div>
+    <div class="gallery">
+      <article class="polaroid" style="--tilt:-2deg"><div class="placeholder" style="aspect-ratio:4/5" data-photo="assets/photo1.jpg">Photo 1<br><small>assets/photo1.jpg</small></div><p>My favorite moment</p></article>
+      <article class="polaroid" style="--tilt:2deg"><div class="placeholder" style="aspect-ratio:4/5" data-photo="assets/photo2.jpg">Photo 2<br><small>assets/photo2.jpg</small></div><p>Just us</p></article>
+      <article class="polaroid" style="--tilt:-1deg"><div class="placeholder" style="aspect-ratio:4/5" data-photo="assets/photo3.jpg">Photo 3<br><small>assets/photo3.jpg</small></div><p>A day to remember</p></article>
+    </div>
+  </div>
+</section>
+<section class="chapter" id="reasons"><div class="wrap reveal"><div class="section-head"><div class="eyebrow">If you ever wonder</div><h2>Reasons I love you</h2><p>And these are only a few of an endless list.</p></div>
+  <div class="love-grid">
+  <article class="love-card" onclick="openReason(0)">
+    <div class="icon">🌷</div>
+    <h3>Your heart</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+
+  <article class="love-card" onclick="openReason(1)">
+    <div class="icon">☀️</div>
+    <h3>Your smile</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+
+  <article class="love-card" onclick="openReason(2)">
+    <div class="icon">🫶</div>
+    <h3>Your presence</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+
+  <article class="love-card" onclick="openReason(3)">
+    <div class="icon">🌙</div>
+    <h3>Your little quirks</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+
+  <article class="love-card" onclick="openReason(4)">
+    <div class="icon">💌</div>
+    <h3>How you love</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+
+  <article class="love-card" onclick="openReason(5)">
+    <div class="icon">♡</div>
+    <h3>Simply you</h3>
+    <p>Tap to find out why ♡</p>
+  </article>
+</div>
+</div></section>
+
+<section class="letters chapter" id="messages"><div class="wrap reveal"><div class="section-head"><div class="eyebrow">For any kind of day</div><h2>Open when…</h2><p>Little notes for moments when I can't be right beside you.</p></div>
+<div class="letter-list">
+  <div><button class="letter-toggle"><b>💌 Open when you miss me</b><span>＋</span></button><div class="letter-content">If you miss me right now, just know that I wish I could be right there with you too. Imagine me holding you close, giving you a kiss, and reminding you that you're loved. Until I can, here's a little piece of me to keep with you. ♡</div></div>
+  <div><button class="letter-toggle"><b>🫂 Open when you're having a rough day</b><span>＋</span></button><div class="letter-content">You don't have to have everything figured out today. It's okay to rest, to feel things, and to take it one step at a time. I'm proud of you, even on days when you don't feel proud of yourself. I love you, always.</div></div>
+  <div><button class="letter-toggle"><b>🌙 Open when you can't sleep</b><span>＋</span></button><div class="letter-content">Take a deep breath, loosen your shoulders, and let today go. I hope your mind gets quiet and you find some peace. If I were there, I'd hold you until you drifted off. Sleep well, my love. ♡</div></div>
+  <div><button class="letter-toggle"><b>💗 Open when you need a reminder</b><span>＋</span></button><div class="letter-content">You are never a burden for needing love, reassurance, patience, or comfort. You matter to me on your best days and your worst days. I choose you, and I'm grateful I get to love you.</div></div>
+</div></div></section>
+<section class="chapter" id="letter"><div class="wrap reveal"><div class="birthday-letter"><h2>Happy Birthday, my love.</h2>
+<p>To my favorite person,</p>
+<p>Today is all about you, but I hope you know that you deserve to be celebrated on more than just your birthday. I wish I could put into words how much happiness, comfort, and love you've brought into my life. Thank you for being you, for the memories we've made, and for all the little moments that mean more to me than you might realize.</p>
+<p>I hope this new year of your life brings you softer days, beautiful surprises, opportunities that make you excited, and every reason to smile. I hope you keep chasing the things you love and never forget how capable and special you are. And whenever life feels heavy, I hope you remember you don't have to carry everything alone.</p>
+<p>I'm so lucky to have you in my life. I love you more than this little website could ever show, and I look forward to making so many more memories with you.</p>
+<p>Happy birthday, baba! ♡</p><p class="signoff">With all my love, always.</p></div></div></section>
+<section class="secret-section chapter" id="secret"><div class="secret-box reveal"><div class="eyebrow">One last thing</div><h2>A little secret…</h2><p>You've made it to the end, but I saved one more thing just for you.</p><button class="secret-button" id="secretButton">Unlock your final message ♡</button>
+  <div class="secret-message" id="secretMessage">
+  <iframe
+    src="https://www.youtube.com/embed/at64xMrbm38"
+    title="A special message for you"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div></div><footer class="footer" id="footer"><span class="heart">♡</span>Made just for you, with love.<br>Happy birthday.</footer></section>
+<!-- Footer is part of the final chapter. -->
+<script>
+const audio=document.getElementById('song'),musicButton=document.getElementById('musicButton'),musicLabel=document.getElementById('musicLabel');audio.volume = 0.10;
+musicButton.addEventListener('click',async()=>{if(audio.paused){try{await audio.play();musicLabel.textContent='Pause our song'}catch(e){musicLabel.textContent='Add your MP3 first'}}else{audio.pause();musicLabel.textContent='Play our song'}});
+document.querySelectorAll('.letter-toggle').forEach(button=>button.addEventListener('click',()=>{const panel=button.nextElementSibling;panel.classList.toggle('open');button.querySelector('span').textContent=panel.classList.contains('open')?'−':'＋'}));
+document.getElementById('secretButton').addEventListener('click',()=>{
+  document.getElementById('secretMessage').classList.add('show');
+  document.getElementById('secretButton').textContent='Unlocked with love ♡';
+  document.getElementById('secretButton').disabled=true;
+});
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));
+// Replace photo placeholders automatically when matching local files exist.
+document.querySelectorAll('[data-photo]').forEach(el=>{const src=el.dataset.photo;const img=new Image();img.onload=()=>{img.alt='A memory together';img.style.cssText='width:100%;aspect-ratio:4/5;object-fit:cover;display:block';el.replaceWith(img)};img.src=src});
+const cover=document.createElement('video');
+cover.src='assets/cover.mp4';
+cover.autoplay=true;
+cover.loop=true;
+cover.muted=true;
+cover.playsInline=true;
+cover.playbackRate = 2;
+cover.style.cssText='width:min(270px,65vw);aspect-ratio:4/5;object-fit:cover;display:block;margin:34px auto 28px;transform:rotate(-3deg);border:10px solid white;box-shadow:0 16px 50px #593c3c1b';
+document.getElementById('heroPhoto').replaceWith(cover);
+
+const reasons = [
+  {
+    icon: '🌷',
+    title: 'Your heart',
+    text: 'I love your heart and the way you selflessly care for others. You are literally one of the kindest people I know and I am so lucky to be YOUR boyfriend. To this day, it still drives me insane that you chose me, a geeky nerd, to be your boyfriend. I will never take that nor you for granted. I love you so much, and I will always do my best to make you feel loved, appreciated, and cared for.'
+  },
+  {
+    icon: '☀️',
+    title: 'Your smile',
+    text: 'You know this by now. Your smile is one of the most beautiful things I have ever seen. It lights up my world and makes me feel all warm inside. It\'s one of the first things I noticed about you on the day we met. If I could, I would add it to the wonders of the world. Your smile never fails to brighten up my day, mahal, and I hope you never ever stop smiling.'
+  },
+  {
+    icon: '🫶',
+    title: 'Your presence',
+    text: 'Even when I am doing my own thing, even if we aren\'t talking, just being on call with you helps put my mind at ease, especially now that I\'m under a lot of stress. You are a big reason why I\'m still waking up in the morning. Please don\'t ever get tired of me, baba.'
+  },
+  {
+    icon: '🌙',
+    title: 'Your little quirks',
+    text: 'My quirky little baby. I love the little ways you express yourself, like the way you call for me, how you hate when I disappear sa call, how you get excited to hear about my day, how you have that eye smile when I talk about nerdy things I like, how you shout for me, how you can so easily make me laugh even when I\'m upset. I love the way you are so expressive and how you can be so cute and funny at the same time. I love your little quirks, mahal, and I hope you never change.'
+  },
+  {
+    icon: '💌',
+    title: 'How you love',
+    text: 'You love with all your heart, and I love that about you. You care so much, you\'re so thoughtful, and you never fail to make the people around you feel appreciated. Sometimes I wish I knew how to love the way you do, but regardless, I am so grateful to be loved by you and called your boyfriend. One day, I will be able to show you just how much I love you, and trust me, nothing can ever express how much I really do.'
+  },
+  {
+    icon: '♡',
+    title: 'Simply you',
+    text: 'At the end of the day, I love you for you. For who you are, for who you are becoming, and for the person you will be in the future. I love every little thing about you, even the flaws you hate. I love you simply for being you. In my eyes, you are perfect, and there\'s nothing more I would ever want than to spend the rest of my days with you.'
+  }
+];
+
+function openReason(index) {
+  const reason = reasons[index];
+
+  document.getElementById('reasonIcon').textContent = reason.icon;
+  document.getElementById('reasonTitle').textContent = reason.title;
+  document.getElementById('reasonText').textContent = reason.text;
+
+  document.getElementById('reasonOverlay').classList.add('show');
+}
+
+function closeReason() {
+  document.getElementById('reasonOverlay').classList.remove('show');
+}
+
+// Button-only chapter navigation (page scrolling disabled)
+const chapters=[...document.querySelectorAll('.chapter')];
+let chapterIndex=0;
+const nav=document.createElement('div');nav.className='chapter-nav';
+const prev=document.createElement('button');prev.textContent='← Previous';
+const progress=document.createElement('span');progress.className='chapter-progress';
+const next=document.createElement('button');next.className='next';next.textContent='Next →';
+nav.append(prev,progress,next);document.body.appendChild(nav);
+function showChapter(index){chapterIndex=Math.max(0,Math.min(index,chapters.length-1,index));chapters.forEach((c,i)=>c.classList.toggle('active',i===chapterIndex));prev.disabled=chapterIndex===0;next.textContent=chapterIndex===chapters.length-1?'Finish ♡':'Next →';progress.textContent=`${chapterIndex+1} / ${chapters.length}`;}
+prev.addEventListener('click',()=>showChapter(chapterIndex-1));
+next.addEventListener('click',()=>{if(chapterIndex===chapters.length-1){showChapter(0)}else showChapter(chapterIndex+1)});
+document.querySelector('[data-go="memories"]').addEventListener('click',()=>showChapter(1));
+showChapter(0);
+// Gate the experience behind a gift-opening button.
+nav.style.display='none';
+document.getElementById('openGift').addEventListener('click',()=>{
+  document.getElementById('giftGate').classList.add('closed');
+  nav.style.display='flex';
+  showChapter(0);
+});
+
+</script>
+</body>
+</html>
